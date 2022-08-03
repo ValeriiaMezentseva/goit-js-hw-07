@@ -24,12 +24,13 @@ const onImagesClick = (event) => {
         return
     }
 };
-let gallery = new SimpleLightbox('.gallery a', {
-    captionsData: 'alt',
-    captionDelay: 250,
-});
 
 
 const container = document.querySelector(".gallery");
 container.insertAdjacentHTML('beforeend', createImagesGallery(galleryItems));
 container.addEventListener('click', onImagesClick);
+
+let gallery = new SimpleLightbox('.gallery a', {
+    captionsData: 'alt',
+    captionDelay: 250,
+});
